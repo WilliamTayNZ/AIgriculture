@@ -297,7 +297,7 @@ function getDataForLocation(lat, lon, dataset) {
         id: 1,
         level: "info",
         title: "Grid Data",
-        msg: `Closest grid: ${gridLabel} | Temp: ${temp !== undefined ? temp.toFixed(2) : "N/A"}°C | Rain: ${
+        msg: `Closest grid: ${`(${gridLat},${gridLon})`} | Temp: ${temp !== undefined ? temp.toFixed(2) : "N/A"}°C | Rain: ${
           rain !== undefined ? rain.toFixed(2) : "N/A"
         } mm | NDVI: ${ndvi !== undefined ? ndvi.toFixed(3) : "N/A"} | Cropland: ${
           cropSupport !== undefined ? cropSupport.toFixed(2) : "N/A"
