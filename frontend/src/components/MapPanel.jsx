@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MapPin } from "lucide-react";
 import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 
-export default function NZMapPanel({ onPick }) {
+export default function MapPanel({ onPick }) {
   const center = [-41.3, 174.7]; // NZ
   const zoom = 5;
 
