@@ -1,4 +1,4 @@
-# AIgriculture – AI-powered farmer's dashboard leveraging satellite imagery and environmental data
+# AI-griculture: AI-powered farmer's dashboard leveraging satellite imagery and environmental data
 
 **AIgriculture** is a **farmer’s dashboard** web app, allowing users to click locations on the world map to **instantly** retrieve important **geospatial insights** about the location, such as **rainfall**, **vegetation health**, and **soil moisture levels**.
 
