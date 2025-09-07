@@ -352,7 +352,7 @@ function ChartsPanel({
   let soil10_40Vals = [];
   if (gridLat !== undefined && gridLon !== undefined && dataset) {
     const points = getAreaGridData(gridLat, gridLon, dataset);
-    barLabels = points.map((p) => `(${p.gridLon},${p.gridLat})`);
+    barLabels = points.map((p) => `(${p.gridLat},${p.gridLon})`);
     rainVals = points.map((p) =>
       p.total_precipitation !== null && p.total_precipitation !== undefined ? p.total_precipitation * 1000 : 0
     );
