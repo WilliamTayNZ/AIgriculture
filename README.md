@@ -11,7 +11,7 @@ This product was built and pitched by a **team of five** at the **AI Forum Hacka
 
 ## 🎥 Demo
 
-<video src="demo/AIgriculture-demo.mp4" controls title="AIgriculture demo"></video>
+<video src="demo.mp4" controls title="AIgriculture demo"></video>
 
 
 
