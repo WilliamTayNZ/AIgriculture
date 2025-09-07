@@ -10,12 +10,9 @@ This product was built and pitched by a **team of five** at the **AI Forum Hacka
 
 
 ## 🎥 Demo
+[Map and metrics demo](https://github.com/user-attachments/assets/814f2315-f6cf-49de-b440-49ac031cd216)
 
-<video controls width="100%">
-  <source src="https://raw.githubusercontent.com/WilliamTayNZ/AIgriculture/main/demo.mp4" type="video/mp4">
-  <a href="https://raw.githubusercontent.com/WilliamTayNZ/AIgriculture/main/demo.mp4">AIgriculture Demo</a>
-</video>
-
+[AI suggestions demo](https://github.com/user-attachments/assets/b8cf8d49-7122-497c-a310-14a34bdf1495)
 
 ## ✨ What you can do
 
