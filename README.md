@@ -9,7 +9,7 @@ The user can also **provide their own context** describing their field, crop, si
 This product was built and pitched by a **team of five** at the **AI Forum Hackathon 2025**. 
 
 
-## 🎥 Demo
+## 🎥 Demo Videos
 [Map and metrics demo](https://github.com/user-attachments/assets/814f2315-f6cf-49de-b440-49ac031cd216)
 
 [AI suggestions demo](https://github.com/user-attachments/assets/b8cf8d49-7122-497c-a310-14a34bdf1495)
