@@ -166,11 +166,19 @@ function NZMapPanel({ onPick }) {
   const center = [-41.3, 174.7]; // NZ
   const zoom = 5;
 
+  // Show hint on load, hide after first interaction
+  const [showHint, setShowHint] = useState(true);
+
   function MapClickHandler() {
     useMapEvents({
       click(e) {
+        setShowHint(false);
         onPick?.({ lat: e.latlng.lat, lng: e.latlng.lng });
       },
+      zoomstart() { setShowHint(false); },
+      movestart() { setShowHint(false); },
+      dragstart() { setShowHint(false); },
+      wheel()     { setShowHint(false); },
     });
     return null;
   }
@@ -198,9 +206,20 @@ function NZMapPanel({ onPick }) {
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
-        <div className="position-absolute top-50 start-50 translate-middle text-secondary small" style={{ pointerEvents: "none", zIndex: 3 }}>
-          (Click anywhere to get latitude/longitude)
-        </div>
+
+        {showHint && (
+          <div 
+          className="position-absolute text-secondary small"
+          style={{ 
+              top: 50,
+              left: 200,
+              pointerEvents: "none",
+              zIndex: 3,
+            }}
+          >
+            (Click to get latitude/longitude)
+          </div>
+        )}
       </div>
     </div>
   );
@@ -720,7 +739,7 @@ export default function AgriDashboard() {
     const areaData = getAreaDataForSuggestions(data.gridLat, data.gridLon, dataset);
     const tips = await fetchChatGPTResponse(context, data, areaData);
     setAiTips(tips);
-  };``
+  };
 
   return (
     <div className="bg-light min-vh-100 position-relative" style={{ width: "100vw", minHeight: "100vh", overflowX: "hidden" }}>
