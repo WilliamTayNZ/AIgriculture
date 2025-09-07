@@ -83,18 +83,17 @@ const seedData = (seed = 1) => {
 */
 
 // ---------------------- UI Pieces ----------------------
-function HealthBar({ value }) {
+function HealthBar({ value, hbPos, setHbPos }) {
   const pct = Math.max(0, Math.min(100, value));
   const color = pct > 70 ? "bg-success" : pct > 40 ? "bg-warning" : "bg-danger";
 
   // Make it draggable
-  const [pos, setPos] = useState({ x: 450, y: 42 });
   const [dragging, setDragging] = useState(false);
 
   useEffect(() => {
     function onMouseMove(e) {
       if (dragging) {
-        setPos({
+        setHbPos({
           x: e.clientX - 130, // center offset
           y: e.clientY - 30,
         });
@@ -111,14 +110,14 @@ function HealthBar({ value }) {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mouseup", onMouseUp);
     };
-  }, [dragging]);
+  }, [dragging, setHbPos]);
 
   return (
     <div
       style={{
         position: "absolute",
-        left: pos.x,
-        top: pos.y,
+        left: hbPos.x,
+        top: hbPos.y,
         width: 260,
         zIndex: 1000,
         cursor: dragging ? "grabbing" : "grab",
@@ -636,6 +635,9 @@ export default function AgriDashboard() {
     fetchData();
   }, []);
 
+  // HealthBar position
+  const [hbPos, setHbPos] = useState({ x: 450, y: 20 });
+
   // Update data on map pick
   useEffect(() => {
     if (selected && dataset) {
@@ -646,6 +648,7 @@ export default function AgriDashboard() {
         setData(d);
         setBanner(d.alerts[0] || null);
         setNoData(false);
+
       } else {
         setData({});
         setBanner(null);
@@ -657,11 +660,16 @@ export default function AgriDashboard() {
       setNoData(false);
     }
 
-    if ((pos.x > 400 && pos.x < 500) && (pos.y > 20 && pos.y < 30)) {
-      setPos({ x: 450, y: 42 });
-    }
+  }, [selected, dataset, hbPos]);
 
-  }, [selected, dataset]);
+  // Ensures HealthBar does not block Alert banner when it first appears
+  useEffect(() => {
+  if (!selected) return; // only when it flips to truthy
+  setHbPos(pos => {
+    const inZone = pos.x > 0 && pos.x < 770 && pos.y > -100 && pos.y < 82;
+    return inZone ? { ...pos, y: 82 } : pos;
+  });
+}, [selected]); // ← no hbPos here
 
   // Helper to get area data for suggestions
   function getAreaDataForSuggestions(gridLat, gridLon, dataset) {
@@ -717,7 +725,7 @@ export default function AgriDashboard() {
   return (
     <div className="bg-light min-vh-100 position-relative" style={{ width: "100vw", minHeight: "100vh", overflowX: "hidden" }}>
       <AlertBanner alert={banner} onDismiss={() => setBanner(null)} />
-      <HealthBar value={data.health || 0} />
+      <HealthBar value={data.health || 0 } hbPos={hbPos} setHbPos={setHbPos} />
 
       {/* Header */}
       <header className="d-flex align-items-center gap-3 px-4 py-4" style={{ width: "100vw" }}>
