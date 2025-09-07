@@ -32,15 +32,8 @@ export default function HealthBar({ value, hbPos, setHbPos }) {
 
   return (
     <div
-      style={{
-        position: "absolute",
-        left: hbPos.x,
-        top: hbPos.y,
-        width: 260,
-        zIndex: 1000,
-        cursor: dragging ? "grabbing" : "grab",
-        userSelect: "none",
-      }}
+      className={`healthbar-wrapper ${dragging ? "dragging" : ""}`}
+      style={{ left: hbPos.x, top: hbPos.y }}
       onMouseDown={() => setDragging(true)}
     >
       <div className="rounded-3 shadow bg-white bg-opacity-75 p-3">
