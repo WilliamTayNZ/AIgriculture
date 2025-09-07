@@ -56,11 +56,11 @@ export default function ChartsPanel({
 
   const showNDVI = ndvi !== undefined && ndvi !== null;
   const ndviPct = showNDVI ? Math.round((Math.max(-1, Math.min(1, ndvi)) + 1) * 50) : 0;
-  const ndviColor = ndviPct > 60 ? "#22c55e" : ndviPct > 40 ? "#fbbf24" : "#ef4444";
+  const ndviLevel = ndviPct > 60 ? "high" : ndviPct > 40 ? "mid" : "low";
 
   const showSupport = cropSupport !== undefined && cropSupport !== null;
   const supportPct = showSupport ? Math.round(Math.max(0, Math.min(1, cropSupport)) * 100) : 0;
-  const supportColor = supportPct > 60 ? "#6366f1" : supportPct > 40 ? "#fbbf24" : "#a3e635";
+  const supportLevel = supportPct > 60 ? "high" : supportPct > 40 ? "mid" : "low";
 
   // Pie for NDVI healthy/unhealthy
   let healthy = 0,
@@ -101,36 +101,36 @@ export default function ChartsPanel({
   };
 
   return (
-    <div className="card mb-3" style={{ height: 420 }}>
+    <div className="card mb-3 charts-card">
       <div className="card-header pb-2">
         <ul className="nav nav-tabs card-header-tabs" role="tablist">
           <li className="nav-item" role="presentation">
             <button className="nav-link active" id="bar-tab" data-bs-toggle="tab" data-bs-target="#bar" type="button" role="tab">
-              Area: Rain, Temp, Soil Moisture
+             Rain, Temp, Soil Moisture <b>(Area)</b>
             </button>
           </li>
           <li className="nav-item" role="presentation">
             <button className="nav-link" id="ndvi-tab" data-bs-toggle="tab" data-bs-target="#ndvi" type="button" role="tab">
-              NDVI & Support
+              NDVI & Crop Support
             </button>
           </li>
           <li className="nav-item" role="presentation">
             <button className="nav-link" id="scatter-tab" data-bs-toggle="tab" data-bs-target="#scatter" type="button" role="tab">
-              Area: Temp vs Rain
+              Temp vs Rain <b>(Area)</b>
             </button>
           </li>
           <li className="nav-item" role="presentation">
             <button className="nav-link" id="soil-tab" data-bs-toggle="tab" data-bs-target="#soil" type="button" role="tab">
-              Soil Moisture (Selected)
+              Soil Moisture
             </button>
           </li>
         </ul>
       </div>
-      <div className="card-body tab-content" style={{ height: 340, overflowY: "auto", overflowX: "hidden" }}>
+      <div className="card-body tab-content charts-tabcontent">
         {noData && <div className="alert alert-warning text-center">No data found for this location. Try another point.</div>}
 
         <div className="tab-pane fade show active" id="bar" role="tabpanel">
-          <div style={{ height: 220, width: "100%", maxWidth: 500, margin: "0 auto" }}>
+          <div className="chart-box">
             <Bar
               data={barData}
               options={{
@@ -144,21 +144,15 @@ export default function ChartsPanel({
         </div>
 
         <div className="tab-pane fade" id="ndvi" role="tabpanel">
-          <div className="d-flex flex-column gap-4 align-items-center justify-content-center" style={{ height: 220 }}>
+          <div className="d-flex flex-column gap-4 align-items-center justify-content-center ndvi-support-wrap">
             {showNDVI && (
-              <div style={{ width: 220 }}>
+              <div className="metric-box">
                 <div className="mb-1 text-center small text-muted">Vegetation Health (NDVI)</div>
-                <div className="progress" style={{ height: "22px", background: "#eee" }}>
+                <div className="progress metric-progress">
                   <div
-                    className="progress-bar"
+                    className={`progress-bar metric-bar ndvi-${ndviLevel}`}
                     role="progressbar"
-                    style={{
-                      width: `${ndviPct}%`,
-                      backgroundColor: ndviColor,
-                      color: "#222",
-                      fontWeight: 500,
-                      fontSize: "1rem",
-                    }}
+                    style={{ width: `${ndviPct}%` }}
                     aria-valuenow={ndviPct}
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -170,19 +164,13 @@ export default function ChartsPanel({
               </div>
             )}
             {showSupport && (
-              <div style={{ width: 220 }}>
+              <div className="metric-box">
                 <div className="mb-1 text-center small text-muted">Crop Support</div>
-                <div className="progress" style={{ height: "22px", background: "#eee" }}>
+                <div className="progress metric-progress">
                   <div
-                    className="progress-bar"
+                    className={`progress-bar metric-bar support-${supportLevel}`}
                     role="progressbar"
-                    style={{
-                      width: `${supportPct}%`,
-                      backgroundColor: supportColor,
-                      color: "#222",
-                      fontWeight: 500,
-                      fontSize: "1rem",
-                    }}
+                    style={{ width: `${supportPct}%` }}
                     aria-valuenow={supportPct}
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -193,12 +181,12 @@ export default function ChartsPanel({
                 <div className="text-center small mt-1 text-muted">Support value: {cropSupport?.toFixed(2)}</div>
               </div>
             )}
-            {!showNDVI && !showSupport && <div className="text-muted text-center small">No NDVI or support data for this grid.</div>}
+            {!showNDVI && !showSupport && <div className="text-muted text-center small">No NDVI or crop support data for this location.</div>}
           </div>
         </div>
 
         <div className="tab-pane fade" id="scatter" role="tabpanel">
-          <div style={{ height: 220, width: "100%", maxWidth: 500, margin: "0 auto" }}>
+          <div className="chart-box">
             <Scatter
               data={scatterData}
               options={{
@@ -224,7 +212,7 @@ export default function ChartsPanel({
         </div>
 
         <div className="tab-pane fade" id="soil" role="tabpanel">
-          <div style={{ height: 220, width: "100%", maxWidth: 300, margin: "0 auto" }}>
+          <div className="chart-box soil-chart-box">
             <Pie data={soilPieData} options={{ responsive: true, plugins: { legend: { display: true } } }} />
             <div className="text-center small mt-2 text-muted">Soil moisture (volumetric): 0–10cm vs 10–40cm.</div>
           </div>
