@@ -1,0 +1,119 @@
+/* ----------- HealthBar outer wrapper ----------- */
+.healthbar-wrapper {
+  position: absolute;
+  width: 260px;
+  z-index: 1000;
+  cursor: grab;
+  user-select: none;
+}
+
+/* Change cursor while dragging */
+.healthbar-wrapper.dragging {
+  cursor: grabbing;
+}
+
+/* --- HealthBar progress bar  --- */
+.healthbar-progress {
+  height: 12px;
+}
+
+
+
+
+/* ----------- MapPanel ----------- */
+
+/* Map body */
+.map-body {
+  height: 520px;
+  position: relative;   
+  padding: 0;
+}
+
+/* Map container */
+.map-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  z-index: 1;
+  overflow: hidden; /* keeps tiles inside rounded corners */
+}
+
+/* --- Grid overlay --- */
+.grid-overlay {
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* --- Hint --- */
+.map-hint {
+  position: absolute;
+  top: 50px;     /* ← was inline top: 50 */
+  left: 200px;   /* ← was inline left: 200 */
+  pointer-events: none;
+  z-index: 3;
+}
+
+
+
+
+/* ----------- ChartsPanel ----------- */
+
+/* --- Charts card height --- */
+.charts-card {
+  height: 420px;
+}
+
+/* --- Tab content container --- */
+.charts-tabcontent {
+  height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* --- Shared chart box --- */
+.chart-box {
+  height: 220px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Soil chart gets a narrower max width  */
+.soil-chart-box {
+  max-width: 300px;
+}
+
+/* --- NDVI/Support section height --- */
+.ndvi-support-wrap {
+  height: 220px;
+}
+
+/* Metric cards */
+.metric-box {
+  width: 220px;
+}
+
+/* Progress container */
+.metric-progress {
+  height: 22px;
+  background: #eee;
+}
+
+/* Shared progress-bar text styles */
+.metric-bar {
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Dynamic colors */
+.ndvi-high { background-color: #22c55e; }
+.ndvi-mid  { background-color: #fbbf24; }
+.ndvi-low  { background-color: #ef4444; }
+
+.support-high { background-color: #6366f1; }
+.support-mid  { background-color: #fbbf24; }
+.support-low  { background-color: #a3e635; }
+
+
+

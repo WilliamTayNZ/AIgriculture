@@ -1,0 +1,12 @@
+__pycache__/
+build/
+dist/
+wheels/
+*.egg-info
+.venv
+.*
+!.gitignore
+.env
+*.lock
+*.nix
+*.sh

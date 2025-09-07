@@ -1,0 +1,151 @@
+Historical New Zealand data:
+
+["New Zealand", "Sheep population peaked at 70 million, shaping wool export dominance", "1982"],
+["New Zealand", "Dairy herd numbers grew from 3 million to over 6 million cows", "1990–2020"],
+["New Zealand", "Pasture-based dairy systems contributed over NZ$20 billion in exports", "2021"],
+["New Zealand", "Average dairy milk solids per cow increased from 270kg to 400kg", "1990–2020"],
+["New Zealand", "Canterbury became largest irrigated area, driven by dairy expansion", "2000s–present"],
+["New Zealand", "Irrigation area expanded from 450,000 ha to over 750,000 ha", "1999–2020"],
+["New Zealand", "Adoption of pivot irrigation improved water use efficiency by up to 50%", "2010s"],
+["New Zealand", "Average annual rainfall ranges from <400mm in Central Otago to >6000mm on West Coast", "Long-term average"],
+["New Zealand", "Severe 2012–2013 drought cost economy NZ$1.5 billion", "2012–2013"],
+["New Zealand", "2017 Mycoplasma bovis outbreak led to culling of over 150,000 cattle", "2017–2021"],
+["New Zealand", "Kiwifruit industry recovered from PSA bacteria outbreak, worth NZ$2.9 billion exports", "2010–2020"],
+["New Zealand", "Wine grape harvests expanded from 6,000 ha to over 40,000 ha", "1980–2020"],
+["New Zealand", "Marlborough accounts for 77% of total wine grape production", "2020"],
+["New Zealand", "Maize silage production supports intensive dairy systems", "2000s–present"],
+["New Zealand", "Greenhouse gas emissions from agriculture account for 48% of total emissions", "2020"],
+["New Zealand", "Sheep and beef farming cover 40% of agricultural land", "2020"],
+["New Zealand", "Native forest clearance reduced biodiversity and affected water quality", "1800s–1900s"],
+["New Zealand", "Precision agriculture tools adopted for pasture growth monitoring", "2015–present"],
+["New Zealand", "Soil organic matter loss in intensively farmed Canterbury plains", "1990s–present"],
+["New Zealand", "Fertiliser nitrogen use rose from 50,000 tonnes to 450,000 tonnes", "1990–2019"],
+["New Zealand", "Lake water quality decline linked to nitrate leaching from farms", "2000s–present"],
+["New Zealand", "Horticulture exports exceeded NZ$6 billion, led by kiwifruit and apples", "2021"],
+["New Zealand", "Avocado industry expanded to meet Asian market demand", "2010s–present"],
+["New Zealand", "Mānuka honey industry reached NZ$300 million in exports", "2010s"],
+["New Zealand", "Sheep numbers declined from 70m to under 27m as dairy expanded", "1982–2020"],
+["New Zealand", "Regenerative farming trialed to restore soil health and reduce emissions", "2020s"],
+["New Zealand", "Government set target to reduce biogenic methane by 10% by 2030", "2019"],
+["New Zealand", "Cyclone Gabrielle damaged fruit crops and horticulture infrastructure", "2023"],
+["New Zealand", "Long-term warming trend increased growing degree days for grapes", "1970–2020"],
+["New Zealand", "Pastoral farmers adopt riparian planting to improve water quality", "2010s–present"],
+
+Existing global/regional data:
+
+["Global", "Irrigated area expanded from 8 million ha to 235 million ha, providing 30% of global food", "1800–1990"],
+["Global", "Irrigated lands reached 352 million ha, with Asia holding 70% share", "2021"],
+["Europe (UK)", "British Agricultural Revolution increased output per worker from 50 to 250 (base=100)", "1500–1850"],
+["Europe (UK)", "Norfolk four-course rotation and seed drills became standard practice", "1700s–1800s"],
+["India", "IR8 rice variety produced 5–10 t/ha, up to 10× traditional yields", "1960s–1970s"],
+["India", "Rice yields rose from 2 t/ha to 6 t/ha due to Green Revolution", "1960s–1990s"],
+["USA", "No-till farming adoption grew from 21% to 30% of cropland", "2017–2023"],
+["Australia", "No-till adoption increased from 26% to 79% of cropland", "2000–2017"],
+["Argentina", "80% cropland under no-till, reducing erosion up to 97%", "2010s"],
+["Brazil", "50% cropland under no-till, boosting incomes up to 77%", "2010s"],
+["Paraguay", "90% cropland under no-till, major erosion reductions", "2010s"],
+["Uruguay", "82% cropland under no-till, sustainable gains", "2010s"],
+["Kenya (Rift Valley)", "Shorter, intense rainy seasons reduced yields, increased erosion", "1970s–present"],
+["China (Loess Plateau)", "Grain-for-Green increased vegetation by 25%, reduced erosion", "1999–present"],
+["Australia (WA)", "Despite 20% rainfall drop, wheat yields doubled via soil tech", "1990–2020"],
+["Australia (WA)", "Deep ripping improved wheat yields by 36–50%", "2015–present"],
+["Global", "Agriculture uses ~70% of freshwater, up to 90% in low-income nations", "2020s"],
+["Global", "Only 16% of farmland irrigated, producing 40% of food", "2020s"],
+["Global", "Agriculture responsible for ~33% of GHG emissions", "2020s"],
+["Middle East", "Ancient qanat irrigation supported desert agriculture", "1000 BCE–present"],
+["Egypt", "Nile flooding sustained agriculture for millennia", "3000 BCE–1960s"],
+["USA (Dust Bowl)", "Severe drought and poor soil management displaced 3.5 million people", "1930–1936"],
+["USA (Iowa)", "Corn yields increased from ~30 bushels/acre to 180+ with hybrids & fertilizer", "1930–2000"],
+["Mexico", "Introduction of dwarf wheat varieties boosted yields", "1940s–1960s"],
+["Sub-Saharan Africa", "Fertilizer adoption lags at ~15 kg/ha vs global avg 135 kg/ha", "2010s"],
+["Sahel Region", "Recurring droughts in 1970s–1980s reduced cereal output by up to 50%", "1970–1985"],
+["Europe", "Organic farming share reached 9.1% of total farmland", "2020"],
+["USA", "Irrigation efficiency improved with center-pivot systems", "1950s–present"],
+["China", "Drip irrigation adoption rose in arid northwest regions", "2000s–present"],
+["India", "Monsoon variability increased; extreme rainfall events doubled", "1950–2015"],
+["Brazil (Amazon)", "Deforestation for agriculture accelerated CO₂ emissions", "1980s–present"],
+["Netherlands", "High-tech greenhouses yield vegetables with 90% less water", "2000s–present"],
+["Israel", "Pioneered drip irrigation, increasing water-use efficiency", "1960s–present"],
+["Ethiopia", "Soil bunds and terraces increased crop yields 20–50%", "2000s–present"],
+["Bangladesh", "Flood-tolerant rice varieties saved harvests during monsoon floods", "2010s"],
+["USA (California)", "Almond boom strained groundwater resources", "2000s–2010s"],
+["Peru", "Terrace farming in Andes preserved soil and water", "Inca era–present"],
+["Pakistan", "Indus Basin irrigation network largest contiguous system in the world", "1960s–present"],
+["Russia (Steppe)", "Mechanized wheat farming expanded output", "1800s–1900s"],
+["France", "Wine grape harvest dates show 13-day earlier ripening due to warming", "1980–2020"],
+["Germany", "Precision ag adoption increased nitrogen efficiency by 20%", "2010s"],
+["USA (Midwest)", "Cover cropping adoption doubled in a decade", "2008–2018"],
+["Spain", "Olive yields threatened by prolonged drought", "2010s–2020s"],
+["Italy", "Vineyard irrigation expanded in hotter regions", "2000s–present"],
+["Morocco", "Rainfed cereals highly sensitive to annual rainfall variation", "1990s–present"],
+["South Africa", "Grape growers adopt deficit irrigation to save water", "2010s"],
+["Vietnam", "Rice intensification led to 3 harvests per year in Mekong Delta", "1990s–present"],
+["Indonesia", "Palm oil expansion drove deforestation", "1990s–present"],
+["Philippines", "Typhoon frequency/intensity increasing, damaging crops", "1980s–present"],
+["Global", "FAO projects food demand to rise 70% by 2050", "2050 projection"]
+
+
+Important Articles & Studies: 
+"The brutal trade‑off that will decide the future of food" — Vox (Aug 2025)
+Explores how nearly half of habitable land is used for farming—inefficiently in many cases—and highlights the environmental cost of beef production, land-use expansion, and industrial farming vs. sustainable alternatives.
+
+Vox
+
+"European and British soils seriously degraded by intensive farming" — The Guardian (May 2025)
+Reveals that over 60% of EU soils and 40% of UK agricultural soils are degraded, impairing water retention and intensifying drought and flood risks. Advocates for soil health to be given as much priority as air and water.
+
+The Guardian
+
+"Do We Need Another Green Revolution?" — The New Yorker (June 2025)
+Reflects on the benefits and downsides of the original Green Revolution: higher yields vs. environmental and socio-economic costs. Discusses modern approaches like vertical farming and lab-grown meat and asks whether true sustainability requires system-wide change.
+
+arXiv
++6
+The New Yorker
++6
+Vox
++6
+
+"Farmers' body warns of climate change impact on agriculture..." — Times of India (recent)
+Reports that Indian farmers face projected 6–25% wheat yield drops and 10–30% losses in rain-fed crop areas by 2050. The article emphasizes the urgent need for climate-smart farming interventions, including micro-irrigation and organic inputs.
+
+The Times of India
+
+Key Academic & Institutional Sources
+
+EPA – Climate Change Impacts on Agriculture and Food Supply
+Covers how climate change affects crops, livestock, soil, water, pollination, growing seasons, wildfires, and rural communities.
+
+Economic Research Service
++15
+US EPA
++15
+MDPI
++15
+
+World Bank – Agriculture Overview
+Highlights agriculture’s potential to reduce poverty and improve food security, especially for the 80% of the world's poor who depend on farming, while noting its role in reducing global greenhouse gas emissions.
+
+World Bank
++1
+
+Arxiv – Agricultural Diversification Benefits
+A meta-analysis demonstrating that diversification practices like intercropping and organic methods can improve profitability, biodiversity, soil quality, and carbon sequestration by up to 2,800% over 20 years.
+
+arXiv
+
+Arxiv – AI in Agriculture: Deep Learning Survey
+Reviews over 200 research works applying AI to agriculture, fisheries, and livestock—highlighting vision models, disease detection, and potential gains in precision and adaptability.
+
+arXiv
+
+USDA ERS – Agricultural Productivity in the U.S.
+Shows that U.S. farm output nearly tripled between 1948 and 2021 due to productivity gains, even as input use slightly declined, underscoring the power of innovation.
+
+USDA
++13
+Economic Research Service
++13
+Farm Bureau
++13
+`
